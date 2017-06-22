@@ -1,0 +1,46 @@
+<!--Bagian Header-->
+<ion-header>
+      <ion-navbar  color="danger">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Detail Berita</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<!--Bagian Isi Konten-->
+<ion-content padding class="card-background-page">
+<!--=================================================================================-->
+<!--Bagian Berita-->
+<!--===================================================================================-->
+<!--Isi Berita-->
+
+              <ion-card>
+                  <ion-item>
+                    <ion-avatar item-left>
+                      <img src="img/akakom.jpg">
+                    </ion-avatar>
+                    <h2><b>{{judul}}</b></h2>
+                    <ion-icon name="calendar" ><i>{{ tgl_dibuat }} </i></ion-icon>
+                  </ion-item>
+                  <img src="img/logo.png" width="50%">
+                  
+                  <ion-card-content>
+                   <p align="justify">{{content}}</p>
+                  </ion-card-content>
+              </ion-card>
+</ion-content>
+
+<ion-footer>
+    <ion-navbar  color="danger">
+          <p align="center">
+              <a href="https://web.facebook.com/akakomyogya/"><ion-icon name="logo-facebook" color="light"></ion-icon></a>         
+              <a href="https://twitter.com/stmikakakom"><ion-icon name="logo-twitter" color="light"></ion-icon> </a>        
+              <a href="https://plus.google.com/u/0/b/104984337270158960500/?pageId=104984337270158960500"><ion-icon name="logo-googleplus" color="light"></ion-icon></a>
+
+              <a href="https://www.instagram.com/stmikakakom/?hl=id"><ion-icon name="logo-instagram" color="light"></ion-icon></a>
+              <a href="https://www.linkedin.com/edu/stmik-akakom-yogyakarta-41810"><ion-icon name="logo-linkedin" color="light"></ion-icon></a>
+          </p>
+    </ion-navbar>
+</ion-footer>

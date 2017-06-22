@@ -1,0 +1,55 @@
+<!--Bagian Header-->
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Info Kampus</ion-title>
+    </ion-navbar>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<!--Bagian Isi Konten-->
+<ion-content padding class="card-background-page">
+<!--=================================================================================-->
+<!--Bagian Berita-->
+<!--===================================================================================-->
+<!--Isi Berita-->
+<ion-grid>
+          <ion-row>
+            <!--berita 1-->
+            <ion-col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 *ngFor="let item of items">
+              <ion-card>
+                  <ion-item>
+                    <ion-avatar item-left>
+                      <img src="img/akakom.jpg">
+                    </ion-avatar>
+                    <h2><b>{{ item.judul }}</b></h2>
+                    <p><i>{{ item.tgl_dibuat }} </i></p>
+                  </ion-item>
+                  <img src="img/{{ item.images }}">
+                  
+                  <ion-card-content>
+                   <p align="justify">{{item.content| slice:0:200}}....</p>
+                  </ion-card-content>
+                  <ion-row>
+                    <ion-col>
+                      <button ion-button icon-left clear small (click)="view({ record: item })">
+                        <ion-icon name="create"></ion-icon>
+                        <div>Selengkapnya...</div>
+                      </button>
+                    </ion-col>
+                  </ion-row>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+</ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="danger">
+  </ion-toolbar>
+</ion-footer>

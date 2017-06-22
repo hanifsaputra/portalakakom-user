@@ -1,0 +1,58 @@
+<!--Bagian Header-->
+<ion-header>
+      <ion-navbar  color="danger">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Jurusan</ion-title>
+    </ion-navbar>
+
+ <ion-toolbar>
+    <ion-segment [(ngModel)]="jurusan">
+      <ion-segment-button value="diploma">
+       <ion-icon name="school"></ion-icon>
+       Diploma Tiga(D3)
+      </ion-segment-button>
+      <ion-segment-button value="sarjana">
+      <ion-icon name="school"></ion-icon>
+        Sarjana (S1)
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <div [ngSwitch]="jurusan">
+    <ion-list *ngSwitchCase="'diploma'">
+        <ion-item-group>
+          <ion-item-divider color="light">Jenjang Diploma Tiga : </ion-item-divider>
+          <ion-item>Komputerisasi Akuntansi (KA)</ion-item>
+          <ion-item>Teknik Komputer  (TK)</ion-item>
+          <ion-item>Manajemen Informatika  (MI)</ion-item>
+        </ion-item-group>
+   </ion-list>
+    <ion-list *ngSwitchCase="'sarjana'">
+        <ion-item-group>
+          <ion-item-divider color="light">Jenjang Sarjana Satu : </ion-item-divider>
+          <ion-item>Teknik Informatika (TI)</ion-item>
+          <ion-item>Sistem Informasi  (SI)</ion-item>
+        </ion-item-group>
+   </ion-list>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+    <ion-navbar  color="danger">
+          <p align="center">
+              <a href="https://web.facebook.com/akakomyogya/"><ion-icon name="logo-facebook" color="light"></ion-icon></a>         
+              <a href="https://twitter.com/stmikakakom"><ion-icon name="logo-twitter" color="light"></ion-icon> </a>        
+              <a href="https://plus.google.com/u/0/b/104984337270158960500/?pageId=104984337270158960500"><ion-icon name="logo-googleplus" color="light"></ion-icon></a>
+
+              <a href="https://www.instagram.com/stmikakakom/?hl=id"><ion-icon name="logo-instagram" color="light"></ion-icon></a>
+              <a href="https://www.linkedin.com/edu/stmik-akakom-yogyakarta-41810"><ion-icon name="logo-linkedin" color="light"></ion-icon></a>
+          </p>
+    </ion-navbar>
+</ion-footer>

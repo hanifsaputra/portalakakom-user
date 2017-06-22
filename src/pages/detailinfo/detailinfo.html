@@ -1,0 +1,38 @@
+<!--Bagian Header-->
+<ion-header>
+      <ion-navbar  color="danger">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Detail Info</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<!--Bagian Isi Konten-->
+<ion-content padding class="card-background-page">
+<!--=================================================================================-->
+<!--Bagian Berita-->
+<!--===================================================================================-->
+<!--Isi Berita-->
+
+              <ion-card>
+                  <ion-item>
+                    <ion-avatar item-left>
+                      <img src="img/akakom.jpg">
+                    </ion-avatar>
+                    <h2><b>{{judul}}</b></h2>
+                    <p><i>{{tgl_dibuat }} </i></p>
+                  </ion-item>
+                  <img src="img/logo.png" width="50%">
+                  
+                  <ion-card-content>
+                   <p align="justify">{{content}}</p>
+                  </ion-card-content>
+              </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="danger">
+  </ion-toolbar>
+</ion-footer>

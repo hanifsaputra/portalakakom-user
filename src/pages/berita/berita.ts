@@ -1,0 +1,46 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+
+@IonicPage()
+@Component({
+  selector: 'page-berita',
+  templateUrl: 'berita.html',
+})
+export class Berita {
+
+   public items : any = [];
+   constructor(public navCtrl: NavController,
+               public http   : Http)
+   {
+
+   }
+
+
+   ionViewWillEnter()
+   {
+      this.load();
+   }
+
+   // Retrieve the JSON encoded data from the remote server
+   // Using Angular's Http class and an Observable - then
+   // assign this to the items array for rendering to the HTML template
+   load()
+   {
+      this.http.get('http://akakom.96.lt/portal-akakom/tampil-berita-kampus.php')
+      .map(res => res.json())
+      .subscribe(data =>
+      {
+         this.items = data;
+      });
+    
+   }
+
+   view(item)
+   {
+      this.navCtrl.push('DetailBeritaPage', item);
+   }
+
+}
